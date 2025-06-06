@@ -18,52 +18,8 @@
   </head>
 <body>
     
-<header>
-    <nav class="navbar navbar-expand-lg">
-  <div class="container">
-        <div class="nav-logo">
-             <a class="navbar-brand" href="#">
-               <img src="images/logo/logo3.png" alt="">
-             </a>
-        </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end gap-4" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="services.html"> Services</a>
-        </li>
-       
-        <li class="nav-item ">
-          <a class="nav-link" href="contact.html" >contact</a>
-        </li>
-         <li class="nav-item ">
-          <a class="nav-link" href="about.html" > about</a>
-        </li>
-        
-        
-        
-        
-        </ul>
-         <ul class="navbar-nav">
-        
-       
-        <li class="nav-item ">
-          <a class="nav-link" href="#" ><i class="bi bi-cart-plus-fill"></i></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="#" ><i class="bi bi-person-circle">login</i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</header>
 
+<div id="header"></div>
 
 <section class="fx-hero-section pt-5 pb-5 position-relative">
     <div class="container">
@@ -1381,5 +1337,12 @@
      <script src="custom-css/javascript.js"></script>
      <script src="custom-css/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script src="custom-css/bootstrap/js/style.js"></script>
+     <script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
 </body>
 </html>
