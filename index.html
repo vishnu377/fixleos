@@ -18,10 +18,71 @@
   </head>
 <body>
     
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-dialog-centered  modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Women's Salon & Spa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class=" fx-services-boxes ">
+            <div class="fx-select-service-box">
+                <a href="services.html">
+                    <img src="images/service-images/women-salon.webp" alt="">
+                    <p>Salon for Women</p>
+                </a>
+            </div>
+             <div class="fx-select-service-box">
+                <a href="">
+                    <img src="images/service-images/women-salon.webp" alt="">
+                    <p>Salon for Women</p>
+                </a>
+            </div>
+             <div class="fx-select-service-box">
+                <a href="">
+                    <img src="images/service-images/women-salon.webp" alt="">
+                    <p>Salon for Women</p>
+                </a>
+            </div>
+             <div class="fx-select-service-box">
+                <a href="">
+                    <img src="images/service-images/women-salon.webp" alt="">
+                    <p>Salon for Women</p>
+                </a>
+            </div>  
+            <div class="fx-select-service-box">
+                <a href="">
+                    <img src="images/service-images/women-salon.webp" alt="">
+                    <p>Salon for Women</p>
+                </a>
+            </div>
+            <div class="fx-select-service-box">
+                <a href="">
+                    <img src="images/service-images/women-salon.webp" alt="">
+                    <p>Salon for Women</p>
+                </a>
+            </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
 
 <div id="header"></div>
 
-<section class="fx-hero-section pt-5 pb-5 position-relative">
+<!-- <section class="fx-hero-section pt-5 pb-5 position-relative">
      <div class="container">
         <div class="row">
             <div class="col-12">
@@ -112,38 +173,75 @@
                           </li>
                         </ul>
                        </div>
-</section>
-<!-- <section class="fx-home-hero-section pt-5 pb-5">
+</section> -->
+<section class="fx-home-hero-section pt-5 pb-5">
         <div class="container">
           <div class="row">
             <div class="col-md-7">
-                   <div class="fx-home-hero-content">
-                    <h1>Home Services At <span>Your Door- Step</span></h1>
+                   <div class="">
+                    <div class="fx-home-hero-content">
+                      <p>All Service Available 24/7</p>
+                    <h1>Your Marketplace for High Quality <span>Services At Your Door-Step.</span></h1>
+                    </div>
                        <div class="fx-search-tabs ">
                              <ul class="d-flex flex-wrap m-0 p-0">
                                  <li>
                                        <p>I'm looking to..</p>
-                                       <input type="text" placeholder="Location">
+                                       <!-- <input type="text" placeholder="Location"> -->
+                                       <div class="fx-custom-select" id="customSelect">
+                                          <div class="fx-select-box d-flex align-items-center justify-content-between" onclick="toggleDropdown()"><span>Search Location</span> <i class="bi bi-caret-down-fill"></i></div>
+                                          <div class="fx-dropdown">
+                                            <input type="text" placeholder="Search service..." oninput="filterOptions(this)" />
+                                            <div class="fx-option" onclick="selectOption(this)">Jaipur</div>
+                                            <div class="fx-option" onclick="selectOption(this)">Jaipur</div>
+                                            <div class="fx-option" onclick="selectOption(this)">Jaipur</div>
+                                            <div class="fx-option" onclick="selectOption(this)">Jaipur</div>
+                                            <div class="fx-option" onclick="selectOption(this)">Jaipur</div>
+                                            <div class="fx-option" onclick="selectOption(this)">Jaipur</div>
+                                          </div>
+                                        </div>
                                  </li>
                                   <li>
                                        <p>I'm looking to..</p>
-                                       <input type="text" placeholder="Location">
+                                       <!-- <input type="text" placeholder="Location"> -->
+                                      <div class="dropdown-wrapper" id="customDropdown">
+                                        <div class="fx-select-box d-flex align-items-center justify-content-between" onclick="toggleCustomDropdown()"><span>Find Categories</span> <i class="bi bi-caret-down-fill"></i></div>
+                                        <div class="dropdown-menu">
+                                          <input type="text" placeholder="Search service..." oninput="searchDropdownItems(this)" />
+                                          <div class="dropdown-item" onclick="chooseDropdownItem(this)">Plumbing</div>
+                                          <div class="dropdown-item" onclick="chooseDropdownItem(this)">Cleaning</div>
+                                          <div class="dropdown-item" onclick="chooseDropdownItem(this)">Electrician</div>
+                                          <div class="dropdown-item" onclick="chooseDropdownItem(this)">Painting</div>
+                                          <div class="dropdown-item" onclick="chooseDropdownItem(this)">AC Repair</div>
+                                          <div class="dropdown-item" onclick="chooseDropdownItem(this)">Smart Lock Repair</div>
+                                        </div>
+                                      </div>
                                  </li>
                                   <li class=" text-center">
-                                       <button type="submit">Search</button>
+                                       <button class="fx-search-hero-bttn" type="submit">Search</button>
                                  </li>
                              </ul>
                        </div>
                    </div>
+                   <div class="fx-services-tab mt-4">
+                          <h3>Our Popular Services</h3>
+                         <ul>
+                             <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="">Home Services</a></li>
+                             <li><a href="">AC Services</a></li>
+                             <li><a href="">Cleaning</a></li>
+                             <li><a href="">Salon for Women</a></li>
+                             <li><a href="">Salon for Men</a></li>
+                         </ul>
+                   </div>
             </div>
             <div class="col-md-5">
               <div class="fx-home-hero-img">
-                   <img src="" alt="">
+                   <img src="images/service-images/hero-work-img.png" alt="">
               </div>
             </div>
           </div>
         </div>
-</section> -->
+</section>
 <section class="fx-advt-and-sale-section pt-5 pb-5">
   <div class="container">
     <div class="row">
@@ -321,44 +419,6 @@
        </div>
             </section>
  
-<!-----
-
-            <div class="topservices">
-              <div class="container">
-                <div class="row">
-                  <div class="col-12">
-                    <h2>Featured Services</h2>
-
-                  </div>
-                  <div class="row">
-                    <div class="col-4">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-<div class="sectionnn">>
-  <h2>expriced totale xpricende</h2>
-</div>
-
-
-<div class="sectionnn">>
-  <h2>work procees</h2>
-</div>
-
-
-
-<div class="sectionnn">>
-  <h2>testamonial</h2>
-</div>
-
--->
-
-
 <section class="advrt-new-slide">
     <div class="container-fluid">
       <div class="row">
@@ -1352,6 +1412,66 @@
      <script src="custom-css/javascript.js"></script>
      <script src="custom-css/bootstrap/js/bootstrap.bundle.min.js"></script>
      <script src="custom-css/bootstrap/js/style.js"></script>
+
+   <script>
+  const customSelect = document.getElementById('customSelect');
+
+  function toggleDropdown() {
+    customSelect.classList.toggle('open');
+  }
+
+  function selectOption(el) {
+    const value = el.textContent;
+    customSelect.querySelector('.fx-select-box').textContent = value;
+    customSelect.classList.remove('open');
+  }
+
+  function filterOptions(input) {
+    const filter = input.value.toLowerCase();
+    const options = customSelect.querySelectorAll('.fx-option');
+    options.forEach(option => {
+      const text = option.textContent.toLowerCase();
+      option.style.display = text.includes(filter) ? 'block' : 'none';
+    });
+  }
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', (e) => {
+    if (!customSelect.contains(e.target)) {
+      customSelect.classList.remove('open');
+    }
+  });
+</script>
+ <script>
+  const customDropdown = document.getElementById('customDropdown');
+
+  function toggleCustomDropdown() {
+    customDropdown.classList.toggle('open');
+  }
+
+  function chooseDropdownItem(el) {
+    const value = el.textContent;
+    customDropdown.querySelector('.fx-select-box').textContent = value;
+    customDropdown.classList.remove('open');
+  }
+
+  function searchDropdownItems(input) {
+    const filter = input.value.toLowerCase();
+    const items = customDropdown.querySelectorAll('.dropdown-item');
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(filter) ? 'block' : 'none';
+    });
+  }
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', (e) => {
+    if (!customDropdown.contains(e.target)) {
+      customDropdown.classList.remove('open');
+    }
+  });
+</script>
+
      <script>
   fetch('header.html')
     .then(response => response.text())

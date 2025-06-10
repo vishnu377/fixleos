@@ -38,8 +38,21 @@ header{
     background: #fcc84f1f;
     margin-top: 60px;
 }
+.fx-home-hero-content p{
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 20px;
 
-
+}
+.fx-home-hero-content h1{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.fx-home-hero-content h1 span{
+    color: #F9B006;
+}
 
 .fx-search-tabs{
     background: #fff;
@@ -58,7 +71,7 @@ header{
 .fx-search-tabs ul li input{
      border: none;
 }
-.fx-search-tabs ul li button{
+.fx-search-hero-bttn{
     border: none;
     background: #F9B006;
     padding: 15px 40px;
@@ -67,10 +80,205 @@ header{
     font-weight: 700;
     font-size: 16px;
 }
+.fx-home-hero-img{
+    max-width: 400px;
+    margin: auto;
+}
+.fx-home-hero-img img{
+    width: 100%;
+}
+
+
+
+  .fx-custom-select {
+      position: relative;
+      width: 200px;
+    }
+
+    .fx-select-box {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #fff;
+    }
+.fx-select-box i{
+    font-size: 10px;
+}
+    .fx-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      max-height: 220px;
+      overflow-y: auto;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .fx-dropdown input {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .fx-dropdown div.fx-option {
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .fx-dropdown div.fx-option:hover {
+      background-color: #f0f0f0;
+    }
+
+    .fx-custom-select.open .fx-dropdown {
+      display: block;
+    }
+    .fx-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.fx-dropdown::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
 
 
 
 
+    /* Container for the custom dropdown */
+.dropdown-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+/* The visible dropdown toggle area */
+.dropdown-toggle {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+/* The dropdown menu hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Show the menu when the parent is open */
+.dropdown-wrapper.open .dropdown-menu {
+  display: block;
+}
+
+/* Input for searching/filtering items */
+.dropdown-menu input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Dropdown item style */
+.dropdown-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Optional: Scrollbar styling */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.fx-services-tab h3{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.fx-services-tab ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fx-services-tab ul li{
+    list-style: none;
+    margin-top: 30px;
+}
+.fx-services-tab ul li a{
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    padding: 15px;
+    border-radius: 3px;
+}
+.fx-services-tab ul li a:hover{
+    background: #F9B006;
+    color: #fff;
+}
+.fx-services-boxes{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+}
+.fx-select-service-box{
+    width: 90px;
+    height: 80px;
+    text-align: center;
+}
+.fx-select-service-box a{
+    text-decoration: none;
+    color: #000;
+    
+}
+.fx-select-service-box a img{
+     width: 65px;
+     height: 65px;
+     border-radius: 5px;
+     margin: auto;
+     margin-bottom: 6px;
+}
+.fx-select-service-box a p{
+    margin: 0;
+    font-size: 11.5px;
+}
 
 .fx-hero-section{
     background: url('/images/service-images/home-banner.png');
