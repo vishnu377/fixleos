@@ -46,6 +46,9 @@
      
 }
 @media (max-width: 575px ){
+  .nav-logo{
+    max-width: 110px;
+}
   .fx-services-home .container-fluid{
     padding: 0px 15px;
   }
